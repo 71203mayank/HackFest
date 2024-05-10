@@ -28,7 +28,7 @@ Current platforms are plagued with outdated job listings and lack direct resume 
 
 ## Tech Stack
 
-- **Frontend**: HTML5, CSS, JS, React.JS, Figma
+- **Frontend**: HTML5, CSS, JS, React.JS, Figma (https://github.com/71203mayank/HackFest/tree/frontend)
 - **Backend**: Node.JS, MongoDB
 - **Artificial Intelligence**: Selenium, Python, FastAPI, Pinecone, LangChain, OpenAI
 
