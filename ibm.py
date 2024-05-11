@@ -53,7 +53,7 @@ def scrape_job_listings(url):
             print(f"Invalid URL: {job_link}")
             print(e)
         
-        return {'job': job_name, 'link': job_link, 'location': job_location, 'description': job_description}
+        return {'job': job_name, 'link': job_link, 'location': job_location, 'description': job_description, 'name':"IBM"}
 
     # Extract job details from each job element
     for job_element in job_elements:
