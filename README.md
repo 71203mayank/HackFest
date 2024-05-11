@@ -42,4 +42,6 @@ Current platforms are plagued with outdated job listings and lack direct resume 
 
 ---
 
+![Workflow](https://github.com/71203mayank/HackFest/blob/main/workflow2.png)
+
 
