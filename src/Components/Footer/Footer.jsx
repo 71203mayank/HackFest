@@ -7,7 +7,7 @@ export default function Footer() {
     <div className='footer'>
         <div className='footer-up'>
             <div className='footer-up-button'>Post a Job</div>
-            <Link to='/login' className='footer-up-button' style={{textDecoration:'none'}}>Search Jobs</Link>
+            <Link to='/user' className='footer-up-button' style={{textDecoration:'none'}}>Search Jobs</Link>
             {/* <div className='footer-up-button'>Search Jobs</div> */}
         </div>
         <div className='footer-container'>

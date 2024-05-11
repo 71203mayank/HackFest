@@ -8,7 +8,7 @@ export default function Hero() {
         <div className='hero-nav'>
             <div className='hero-nav-title'>PlaceMeNow.in</div>
             {/* <Link to='/login'> </Link> */}
-            <Link className='hero-nav-button' style={{textDecoration:'none', color:'white'}}>Try Now</Link>
+            <Link to='/login' className='hero-nav-button' style={{textDecoration:'none', color:'white'}}>Try Now</Link>
             
             
         </div>
