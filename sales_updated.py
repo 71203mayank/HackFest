@@ -6,10 +6,10 @@ from selenium.webdriver.chrome.options import Options
 def scrape_salesforce_job_listings(url):
     # Set Chrome options for headless mode
     chrome_options = Options()
-    chrome_options.add_argument("--headless")  # Enable headless mode
+    chrome_options.add_argument("--headless=new")  # Enable headless mode
 
     # Initialize Chrome WebDriver with headless option
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome(options=chrome_options)
     driver.get(url)  # Open the provided URL
     time.sleep(3)
 
@@ -26,7 +26,7 @@ def scrape_salesforce_job_listings(url):
         job_link = job_name_element.get_attribute('href')
         
         # Visit the job link to extract the job description
-        driver1 = webdriver.Chrome()
+        driver1 = webdriver.Chrome(options=chrome_options)
         driver1.get(job_link)
         print(job_link)
         time.sleep(2)
