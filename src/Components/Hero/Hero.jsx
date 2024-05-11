@@ -19,7 +19,9 @@ export default function Hero() {
             <div className='hero-nav-title'>PlaceMeNow.in</div>
             {/* <Link to='/login'> </Link> */}
             {/* <Link to='/login' className='hero-nav-button' style={{textDecoration:'none', color:'white'}}>Try Now</Link> */}
+            {/* {isAuthenticated?(<button className='hero-nav-button' onClick={logout()}>Log out</button>):(<button className='hero-nav-button' onClick={handleLogin}>Try Now</button>)} */}
             <button className='hero-nav-button' onClick={handleLogin}>Try Now</button>
+          
 
             
             

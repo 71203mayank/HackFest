@@ -31,8 +31,7 @@ export default function JobCard(props) {
                 link:props.link,
                 jobLocation:props.location,
                 company:props.company,
-                description:props.description,
-                imgSrc:imgSrc
+                description:props.description
             }
         })
     }

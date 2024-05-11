@@ -1,4 +1,42 @@
 .learn{
     height:calc(100svh - 127px);
     /* background-color: aquamarine; */
+    display: flex;
+}
+.learn-left{
+    flex:1;
+    border-right:1px solid var(--primary-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.learn-left-title{
+    font-family: 'Agency FB Bold';
+    font-size: 18px;
+}
+
+.learn-input{
+    height: 36px;
+    width: 300px;
+    padding-left:12px;
+    font-size: 16px;
+    /* margin-left:6px; */
+}
+.learn-label{
+    margin-bottom: 6px;
+    margin-top:12px;
+    font-family: 'Agency FB Bold';
+    font-size: 18px;
+}
+
+.learn-textarea{
+    background-color: rgb(225, 225, 225);
+    border:none;
+    border:1px solid rgb(197, 197, 197);
+}
+
+.learn-right{
+    flex:1
 }

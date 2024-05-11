@@ -5,12 +5,31 @@ import { Link } from 'react-router-dom';
 
 export default function JobDesc() {
     const location = useLocation();
-    const { job, link, jobLocation, company,description,imgSrc } = location.state;
+    const { job, link, jobLocation, company,description} = location.state;
+    let imgSrc = '';
+
+    switch (company) {
+        case 'Google':
+            imgSrc = '/asset/google.svg';
+            break;
+        case 'SAP':
+            imgSrc = '/asset/sap.svg';
+            break;
+        case 'IBM':
+            imgSrc = '/asset/ibm.svg';
+            break;
+        case 'Salesforce':
+            imgSrc = '/asset/salesforce.svg';
+            break;
+        default:
+            imgSrc = '/asset/salesforce.svg';
+            break;
+    }
+   
   return (
     <div className='job-desc'>
         {/* mayank gupta */}
         <div className='job-desc-img-container'>
-
             <img className='job-desc-img' src={imgSrc} alt='logo'></img>
         </div>
         <div className='job-desc-company job-desc-content'><div style={{width:'100px'}}>Company:</div><div>{company}</div></div>

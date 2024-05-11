@@ -1,13 +1,23 @@
 import React from 'react'
 import './Footer.css'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Footer() {
+    const {user, loginWithRedirect} = useAuth0();
+    const navigate = useNavigate(); 
+    const handleLogin = () => {
+        loginWithRedirect();
+    }
+    if (user) {
+        navigate('/user');
+    }
   return (
     <div className='footer'>
         <div className='footer-up'>
             <div className='footer-up-button'>Post a Job</div>
-            <Link to='/user' className='footer-up-button' style={{textDecoration:'none'}}>Search Jobs</Link>
+            <Link to='/user' className='footer-up-button' style={{textDecoration:'none'}} onClick={handleLogin}>Search Jobs</Link>
             {/* <div className='footer-up-button'>Search Jobs</div> */}
         </div>
         <div className='footer-container'>

@@ -35,6 +35,9 @@
     font-family: 'Agency FB Reg';
     font-size:18px;
 }
+.hero-nav-button:hover{
+    cursor: pointer;
+}
 .hero-main{
     display: flex;
     justify-content: center;
