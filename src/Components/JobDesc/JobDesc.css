@@ -1,4 +1,90 @@
 .job-desc{
-    height: 100svh;
-    background-color: aqua;
+    min-height:calc(100svh - 127px);
+    height: fit-content;
+    /* background-color: aqua; */
+    margin-inline: 75px;
+    margin-top: 36px;
+    margin-bottom: 100px;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.job-desc-img-container{
+    height: 75px;
+    width:75px;
+    border:1px solid black;
+
+}
+.job-desc-img{
+    height:100%;
+    width:100%;
+}
+
+.job-desc-content{
+    font-size: 18px;
+    font-family: 'Inter Semi Bold';
+    color:#575757;
+    display: flex;
+}
+.job-description-heading{
+    font-size: 18px;
+    font-family: 'Inter Semi Bold';
+    color:#575757;
+}
+.job-description{
+    font-size: 18px;
+    font-family: 'Inter Regular';
+    color:#575757;
+}
+
+.job-desc-apply{
+    height:48px;
+    width:120px;
+    background-color: #076AFF;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-decoration: line-through; */
+    font-family: 'Agency FB Bold';
+    font-size: 24px;
+    border:1px solid #076AFF;
+    position:absolute;
+    bottom:-50px;
+    left:50%;
+    transform: translateX(-50%);
+    margin-top: 36px;
+
+}
+.job-desc-apply:hover{
+    color:#076AFF;
+    background-color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+.job-desc-back{
+    height:48px;
+    width:120px;
+    background-color:white;
+    color:var(--primary-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-decoration: line-through; */
+    font-family: 'Agency FB Bold';
+    font-size: 24px;
+    border:1px solid var(--primary-black);
+    position:absolute;
+    top:-20px;
+    right:-50px;
+    transform: translateX(-50%);
+    margin-top: 36px;
+
+}
+.job-desc-back:hover{
+    color:white;
+    background-color: var(--primary-black);
 }

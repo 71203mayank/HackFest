@@ -1,9 +1,7 @@
 import React from 'react'
 import './JobCard.css'
-// import { } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 export default function JobCard(props) {
-    // console.log(props.link)
     let imgSrc = '';
 
     switch (props.company) {
@@ -33,14 +31,12 @@ export default function JobCard(props) {
                 link:props.link,
                 jobLocation:props.location,
                 company:props.company,
-                description:props.description
+                description:props.description,
+                imgSrc:imgSrc
             }
         })
     }
   return (
-    // <a href={props.link} style={{textDecoration:'none'}}>
-
-    // </a>
         <div className='job-card'>
             <div className='job-card-img-container'>
                 <img className='job-card-img' src={imgSrc} alt={props.company} />
@@ -51,9 +47,6 @@ export default function JobCard(props) {
                     <div className='job-card-location'>{props.location}</div>
                     <div className='job-view' onClick={handleView}>See Details</div>
                 </div>
-                
-                {/* <Link to='/user/jobdesc'>view</Link> */}
-                {/* <Link to={{ pathname: '/user/jobdesc', state: { job: props.job, company: props.company, jobLocation: props.location, link: props.link } }}>View</Link> */}
                 
             </div>
         </div>

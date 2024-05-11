@@ -3,6 +3,7 @@ import './Navbar.css'
 import { Outlet } from 'react-router-dom'
 import MiniFooter from '../MiniFooter/MiniFooter'
 import { useAuth0 } from '@auth0/auth0-react'
+import { Link } from 'react-router-dom'
 // import axios from 'axios'
 // import Footer from '../Footer/Footer'
 export default function Navbar() {
@@ -51,11 +52,11 @@ export default function Navbar() {
         <div className='navbar'>
             <div className='navbar-title'>PlaceMeNow.in</div>
             <div className='navbar-links-container'>
-                <div className='navlink'>Find Jobs</div>
-                <div className='navlink'>Build Your <br></br>Application</div>
+                <Link to='/user'><div className='navlink'>Find Jobs</div></Link>
+                <Link to='/user/build'><div className='navlink'>Build Your <br></br>Application</div></Link>
+                <Link to='/user/learn'><div className='navlink'>Prepare</div></Link>
                 <div className='navlink'>Score Your <br></br> Application</div>
                 <div className='navlink'>Interview <br></br> Diaries</div>
-                <div className='navlink'>Learn</div>
                 {/* <button onClick={handleOnClick}  className='navlink button-navlink'>Learn</button> */}
                 <button onClick={(e)=>logout()} className='navlink button-navlink'>Log Out</button>
             </div>

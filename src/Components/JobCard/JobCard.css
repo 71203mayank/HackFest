@@ -44,7 +44,7 @@
     width: max-content;
     color:purple;
     margin-right:20px;
-    
+    font-family: 'Inter Regular';
     /* border: none; */
     /* border:1px solid black; */
 }
@@ -54,6 +54,6 @@
     text-decoration: underline;
 }
 
-.job-card-details{
-    /* border:1px solid black; */
-}
+/* .job-card-details{
+    border:1px solid black;
+} */
