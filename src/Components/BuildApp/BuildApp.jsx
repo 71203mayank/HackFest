@@ -116,10 +116,6 @@ function PDFParserReact() {
           axios.post(url, data)
             .then(response => {
               console.log('Success:', response.data);
-            //   setData(JSON.stringify(response.data));
-            //   const formattedMsg = data.replace(/\\n/g,'<br/>');
-            //   console.log(formattedMsg)
-            //   setData(formattedMsg);
             const markdown = new MarkdownIt();
             const renderedHtml = markdown.render(response.data);
             setData(renderedHtml)

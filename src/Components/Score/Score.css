@@ -1,0 +1,17 @@
+.score{
+    height:calc(100svh - 127px);
+    display: flex;
+}
+.score-left{
+    flex:1;
+    border-right:1px solid var(--primary-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.score-right{
+    flex:1;
+    margin: 20px;
+    overflow-y: scroll;
+    font-family: 'Inter Regular';
+}

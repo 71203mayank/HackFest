@@ -55,7 +55,8 @@ export default function Navbar() {
                 <Link to='/user'><div className='navlink'>Find Jobs</div></Link>
                 <Link to='/user/build'><div className='navlink'>Build Your <br></br>Application</div></Link>
                 <Link to='/user/learn'><div className='navlink'>Prepare</div></Link>
-                <div className='navlink'>Score Your <br></br> Application</div>
+                <Link to='/user/score'><div className='navlink'>Score Your <br></br> Application</div></Link>
+                
                 <div className='navlink'>Interview <br></br> Diaries</div>
                 {/* <button onClick={handleOnClick}  className='navlink button-navlink'>Learn</button> */}
                 <button onClick={(e)=>logout()} className='navlink button-navlink'>Log Out</button>

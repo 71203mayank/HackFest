@@ -95,6 +95,8 @@
 
 .build-app-right{
     /* background-color: var(--primary-black); */
+    flex:1;
+    margin: 20px;
     overflow-y: scroll;
-    margin-inline: 20px;
+    font-family: 'Inter Regular';
 }
