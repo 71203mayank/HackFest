@@ -32,17 +32,14 @@ Current platforms are plagued with outdated job listings and lack direct resume 
 - **Backend**: Node.JS, MongoDB
 - **Artificial Intelligence**: Selenium, Python, FastAPI, Pinecone, LangChain, OpenAI
 
-## Future Scope
+## Workflow
 
-- **Integration with College Placement Cells**: To improve job matching and recruitment processes.
-- **Mobile Application**: To provide real-time updates and enhance engagement through push notifications.
-- **Enhanced Interview Processes**: Implementing virtual interview spaces to streamline the interviewing experience.
+- **JOb Listing**: Scrape websites of all organisations using dynamic scraping framework Selenium. Further store it in a database and retrieve data whenever needed
+- **Application Builder**: Use Langchain , OpenAI and Gemini models to analyse the document and give the desired output. Documents can be scraped or given input as text. 
+- **Application Booster**: Input User Resume/CV along with job description , prompt engineer and send a request to the chat apis and output the response analysis
+- **Interview Diaries**: Store , Retrieve and Update interview experiences in the DataBase
+- **Job Specific Roadmaps**: Take data input from the User like topics , Number of days and other user specific input , make api calls using FastApi with LangChain modules and send the output to be diplayed to frontend.
 
 ---
 
-## Contact Us
-
-- **Mayank Gupta**: 8921969412, mayank71203@gmail.com
-- **Mohammad Saad**: 8421038112, mohammadsaad_b210488cs@nitc.ac.in
-- **Chandrakant V Bellary**: 8137005243, chandrakantvb2003@gmail.com
 
