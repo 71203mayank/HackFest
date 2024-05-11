@@ -1,12 +1,16 @@
 import React from 'react'
 import './Hero.css'
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
     <div className='hero'>
         <div className='hero-nav'>
             <div className='hero-nav-title'>PlaceMeNow.in</div>
-            <div className='hero-nav-button'>Try Now</div>
+            {/* <Link to='/login'> </Link> */}
+            <Link className='hero-nav-button' style={{textDecoration:'none', color:'white'}}>Try Now</Link>
+            
+            
         </div>
         <div className='hero-title'> 
             <div className='hero-title-one'>Get Placed with the Power of</div>

@@ -1,11 +1,14 @@
 import React from 'react'
 import './Footer.css'
+import { Link } from 'react-router-dom';
+
 export default function Footer() {
   return (
     <div className='footer'>
         <div className='footer-up'>
             <div className='footer-up-button'>Post a Job</div>
-            <div className='footer-up-button'>Search Jobs</div>
+            <Link to='/login' className='footer-up-button' style={{textDecoration:'none'}}>Search Jobs</Link>
+            {/* <div className='footer-up-button'>Search Jobs</div> */}
         </div>
         <div className='footer-container'>
             <div className='footer-container-one'>

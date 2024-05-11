@@ -5,10 +5,56 @@
 
 .job-list-filter-container{
     width:300px;
-    border-right: 1px solid black;
-    background-color: aqua;
+    border-right: 1px solid var(--primary-black);
+    /* background-color: aqua; */
 }
 .job-list-container{
     width:calc(100vw - 300px);
     overflow-y: scroll;
+}
+.job-filter{
+    /* border:1px solid black; */
+    margin-inline:12px;
+    margin-block:18px;
+}
+.job-filter div{
+    font-size:18px;
+    font-family: 'Inter Regular';
+    color:var(--grey);
+}
+.job-filter input{
+    width:250px;
+    height:30px;
+    margin-top:4px;
+    font-family: 'Inter Regular';
+    background-color: rgb(222, 222, 222);
+    border:none;
+    border-radius:2px;
+    font-size:16px;
+}
+
+.filter-button-container{
+    display:flex;
+    justify-content: center;
+}
+
+.filter-button{
+    height:36px;
+    width:100px;
+    border-radius:0;
+    border:1px solid var(--primary-black);
+    font-size: 24px;
+    font-family: "Agency FB Bold";
+    color: var(--primary-black);
+    background-color: white;
+}
+.filter-button:hover{
+    cursor: pointer;
+    background-color: var(--primary-black);
+    color:white;
+}
+
+.filter-button.disabled {
+    pointer-events: none;
+    cursor: default;
 }

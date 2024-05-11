@@ -1,4 +1,14 @@
 .mini-footer{
     height:50px;
-    border-top:1px solid black;
+    border-top:1px solid var(--primary-black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Agency FB Bold';
+    font-size: 32px;
+    color:var(--primary-black);
+}
+
+.mini-footer-container{
+    margin-inline:20px;
 }

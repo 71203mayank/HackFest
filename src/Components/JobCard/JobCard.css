@@ -8,7 +8,7 @@
 .job-card-img-container{
     height:80px;
     width:80px;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 
 .job-card-desc{
@@ -20,9 +20,16 @@
 .job-card-title{
     font-size: 20px;
     font-family: 'Inter Semi Bold';
+    margin-inline-end: 20px;
 }
 .job-card-location{
     margin-block:6px;
     font-size: 16px;
     font-family: 'Inter Regular';
+}
+
+.job-card-img{
+    height:100%;
+    width:100%;
+    scale:0.7;
 }

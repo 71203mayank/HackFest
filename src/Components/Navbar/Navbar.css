@@ -1,6 +1,9 @@
 .navbar{
     height:75px;
-    border-bottom:1px solid black;
+    border-bottom:1px solid var(--primary-black);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Agency FB Bold';
 }
 .navbar-title{
     width:300px;
@@ -11,5 +14,27 @@
     justify-content: center;
     align-items: center;
     font-size: 28px;
-    font-family: 'Agency FB Bold';
+    
+}
+
+
+.navbar-links-container{
+    display: flex;
+}
+
+.navlink{
+    width:150px;
+    height:100%;
+    border-left:1px solid var(--primary-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size:18px;
+    text-align: center;
+
+}
+.navlink:nth-child(1){
+    background-color: #6B81FF;
+    color:white;
 }
