@@ -1,0 +1,15 @@
+.navbar{
+    height:75px;
+    border-bottom:1px solid black;
+}
+.navbar-title{
+    width:300px;
+    /* background-color: aqua; */
+    height:75px;
+    border-right: 1px solid var(--primary-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-family: 'Agency FB Bold';
+}

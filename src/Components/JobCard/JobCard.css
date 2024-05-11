@@ -1,0 +1,28 @@
+.job-card{
+    min-height: 80px;
+    height: fit-content;
+    border-bottom: 1px solid black;
+    display: flex;
+    gap:20px;
+}
+.job-card-img-container{
+    height:80px;
+    width:80px;
+    background-color: aquamarine;
+}
+
+.job-card-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:var(--grey);
+}
+.job-card-title{
+    font-size: 20px;
+    font-family: 'Inter Semi Bold';
+}
+.job-card-location{
+    margin-block:6px;
+    font-size: 16px;
+    font-family: 'Inter Regular';
+}

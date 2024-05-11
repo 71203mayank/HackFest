@@ -1,0 +1,25 @@
+.feature-card{
+    width:460px;
+    margin-inline:20px;
+    margin-bottom: 12px;
+    color:var(--primary-black)
+}
+.feature-card-img-container{
+    height:65px;
+    width:65px;
+    /* border: 1px solid black; */
+}
+.feature-card-img{
+    height:100%;
+    width:100%;
+}
+.feature-card-title{
+    font-family: 'Inter Semi bold';
+    font-size:32px;
+    margin-top: 6px;
+}
+.feature-card-desc{
+    font-family: 'Inter Regular';
+    font-size: 18px;
+    /* margin-top: 6px; */
+}

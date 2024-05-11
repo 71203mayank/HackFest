@@ -1,0 +1,14 @@
+.job-list{
+    height: calc(100svh - 127px);
+    display: flex;
+}
+
+.job-list-filter-container{
+    width:300px;
+    border-right: 1px solid black;
+    background-color: aqua;
+}
+.job-list-container{
+    width:calc(100vw - 300px);
+    overflow-y: scroll;
+}

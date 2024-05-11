@@ -1,0 +1,181 @@
+/* .features{
+    height: 200svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.features-container-one-inner{
+    border:1px solid var(--primary-black);
+    display: flex;
+}
+.features-container-one-subinner{
+    width:500px;
+    height:400px;
+}
+.features-container-one-subinner:nth-child(1){
+    border-right:1px solid var(--primary-black);
+}
+
+.features-container-two{
+    display: flex;
+}
+.features-container-two-inner{
+    width: 501px;
+    height:500px;
+}
+.features-container-two-inner-left{
+    height: 250px;
+    border-inline: 1px solid black;
+} */
+
+
+.features{
+    /* height: 250svh; */
+    /* display: flex;
+    justify-content: center; */
+    margin-bottom: 36px;
+}
+.features-container{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    justify-content: center;
+}
+
+.features-container-inner{
+    /* border: 1px solid black; */
+    position: relative;
+    height:400px;
+    display: flex;
+    align-items: end;
+    overflow: hidden;
+}
+.features-container-inner:nth-child(3) {
+    border-left: 1px solid var(--primary-black);
+    border-top: 1px solid var(--primary-black);
+    border-right: 1px solid var(--primary-black);
+    border-bottom: 1px solid var(--primary-black);
+
+}
+.features-container-inner:nth-child(4) {
+    /* border-left: 1px solid var(--primary-black); */
+    border-top: 1px solid var(--primary-black);
+    border-right: 1px solid var(--primary-black);
+    border-bottom: 1px solid var(--primary-black);
+
+}
+.features-container-inner:nth-child(7) {
+    /* border-left: 1px solid var(--primary-black); */
+    border-left: 1px solid var(--primary-black);
+    border-right: 1px solid var(--primary-black);
+    border-bottom: 1px solid var(--primary-black);
+
+}
+.features-container-inner:nth-child(8) {
+    /* border-left: 1px solid var(--primary-black); */
+    border-top: 1px solid var(--primary-black);
+    border-right: 1px solid var(--primary-black);
+    border-bottom: 1px solid var(--primary-black);
+
+}
+.features-container-inner-temp{
+    height:400px;
+}
+.feature-temp-left{
+    display: flex;
+    flex-direction: column;
+}
+.features-temp-left-inner{
+    flex:1;
+    /* border:1px solid black; */
+    display: flex;
+    align-items: end;
+}
+.features-temp-left-inner:nth-child(1){
+    border-left: 1px solid var(--primary-black);
+    border-right: 1px solid var(--primary-black);
+    border-bottom: 1px solid var(--primary-black);
+}
+.features-temp-left-inner:nth-child(2){
+    border-left: 1px solid var(--primary-black);
+    border-right: 1px solid var(--primary-black);
+    border-bottom: 1px solid var(--primary-black);
+}
+
+.feature-container-img{
+    position: absolute;
+}
+.feature-img-one{
+    scale:0.8;
+    top:-60px;
+    right:-50px;
+}
+.feature-img-two{
+    scale:0.9;
+    top:10px;
+    right:10px;
+}
+.feature-img-three{
+    /* scale: 0.9; */
+    top:10px;
+    right:10px;
+}
+.feature-img-four{
+    top:10px;
+    right:-70px;
+}
+
+.feature-temp-right{
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: right; */
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    /* padding: 10px; */
+}
+
+.feature-temp-right-quest{
+    font-family: 'Inter Semi Bold';
+    width:340px;
+    height:48px;
+    font-size:18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:100px ;
+    background-color: #6B81FF;
+    color: white;
+    margin-top:10px;
+    /* margin-right:10px; */
+
+}
+
+.feature-temp-right-main{
+    margin-bottom:5px;
+    /* margin-right:10px; */
+    font-family: 'Inter Bold';
+    text-align: right;
+    font-size: 92px;
+    line-height: 100px;
+    background-image: linear-gradient(to bottom, #DD4638, #9322BE, #275386, #7C6717); /* Change direction to bottom */
+    -webkit-background-clip: text; /* For Safari/Chrome */
+    background-clip: text; /* For other browsers */
+    color: transparent; /* Make text transparent */
+}
+
+.feature-temp-top-quest{
+    font-family: 'Inter Semi Bold';
+    width:300px;
+    height:48px;
+    font-size:18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:100px ;
+    background-color: #6B81FF;
+    color: white;
+    margin-top:36px;
+    margin-bottom: 10px;
+}

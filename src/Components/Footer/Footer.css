@@ -1,0 +1,110 @@
+.footer{
+    font-family: 'Agency FB Bold';
+}
+
+.footer-up{
+    height:240px;
+    /* border-top: 1px solid black; */
+    color:var(--primary-black);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer-up-button{
+    font-size: 32px;
+    height:56px;
+    width:200px;
+    border:1px solid var(--primary-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-up-button:hover{
+    cursor: pointer;
+    color:white;
+    background-color: var(--primary-black);
+}
+
+.footer-container{
+    /* height:50vh; */
+    background-color: var(--primary-black);
+    color: white;
+    
+}
+.footer-container-one{
+    height:180px;
+    /* border-bottom: white 1px solid; */
+    display: flex;
+}
+.footer-container-one-left{
+    flex:3;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+}
+.footer-container-one-left-inner{
+    padding-left:20px;
+    font-size: 64px;
+}
+.footer-container-one-right{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.footer-container-one-right-inner{
+    border-bottom: 1px solid white;
+    flex:1;
+    /* text-align: right; */
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-size: 32px;
+}
+
+.footer-container-two{
+    height: 50px;
+    border-bottom: 1px solid white;
+    display: flex;
+    font-size: 24px;
+}
+
+.footer-container-two-inner:nth-child(1) {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.footer-container-two-inner:nth-child(2) {
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 20px; */
+}
+.footer-container-two-inner:nth-child(3) {
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 20px;
+}
+/* .footer-container-two-inner{
+    flex: 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+} */
+
+.footer-container-three{
+    height: 70px;
+    font-size: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-container-three-inner{
+    padding-inline: 20px;
+}
