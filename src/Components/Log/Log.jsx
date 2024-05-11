@@ -1,28 +1,34 @@
-import React,{useState} from 'react'
+import React from 'react'
 import './Log.css'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 export default function Log() {
-  const [mail,setMail] = useState('');
-  const [password,setPassword] = useState('');
+  // const [mail,setMail] = useState('');
+  // const [password,setPassword] = useState('');
 
   return (
     <div className='login'>
-        <div className='login-login'>
-        <div>
-          <div>E-mail</div>
-          <input type='text' value={mail} onChange={(e)=>{setMail(e.target.value)}}></input>
-        </div>
-        <div>
-          <div>password</div>
-          <input type='password' value={password} onChange={(e)=>{setPassword(e.target.value)}}></input>
-        </div>
-        <Link to='/user'><div className='login-button'>Login</div></Link>
-        </div>
+          <div className='login-empty-one'></div>
+          <div className='login-empty-one'></div>
+          <div className='login-empty-one'></div>
+          <div></div>
+          <div className='login-container'>
+            <div className='login-container-left login-inner-container'></div>
+            <div className='empty-vertical'></div>
+            <div className='login-container-right login-inner-container'></div>
+            <img className='login-women-img' alt='women' src='./asset/women.svg'></img>
+            <img className='login-vector-img' alt='vector' src='./asset/foreground-img.svg'></img>
+          </div>
+          <div></div>
+          <div className='login-empty-one'></div>
+          <div className='login-empty-one'></div>
+          <div className='login-empty-one'></div>
         
         
+      {/* <Link to='/user'><div className='login-button'>Login</div></Link> */}
     </div>
   )
 }
+
 
 // import React, { useState } from 'react';
 // import styles from './Log.Module.css';

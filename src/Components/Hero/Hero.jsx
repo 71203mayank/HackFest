@@ -1,14 +1,26 @@
 import React from 'react'
 import './Hero.css'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Hero() {
+    const {user, loginWithRedirect} = useAuth0();
+    const navigate = useNavigate(); 
+    const handleLogin = () => {
+        loginWithRedirect();
+    }
+    if (user) {
+        navigate('/user');
+    }
   return (
     <div className='hero'>
         <div className='hero-nav'>
             <div className='hero-nav-title'>PlaceMeNow.in</div>
             {/* <Link to='/login'> </Link> */}
-            <Link to='/login' className='hero-nav-button' style={{textDecoration:'none', color:'white'}}>Try Now</Link>
+            {/* <Link to='/login' className='hero-nav-button' style={{textDecoration:'none', color:'white'}}>Try Now</Link> */}
+            <button className='hero-nav-button' onClick={handleLogin}>Try Now</button>
+
             
             
         </div>

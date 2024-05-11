@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react'
 import './JobList.css'
 import JobCard from '../JobCard/JobCard'
 import axios from 'axios';
+// import { useNavigate } from 'react-router-dom';
 
 export default function JobList() {
     const [data,setData] = useState([]);
@@ -9,6 +10,8 @@ export default function JobList() {
     const [name,setName] = useState('');
     const [job,setJob] = useState('');
     // const [isable,setAble]=useState(true)
+
+    // const navigate = useNavigate();
 
     const [url,setUrl] = useState('http://localhost:8082/api/jobs');
 
@@ -77,11 +80,13 @@ const handleFilter = () => {
 
             {data.map((item,id)=>(
                 <JobCard
-                    id = {id}
+                    key = {id}
+                    // onClick = {() => navigate(`/jobdesc`,{state:{item}})}
                     job={item.job}
                     company={item.name}
                     location={item.location}
                     link={item.link}
+                    description={item.description}
                 />
             ))}
         </div>

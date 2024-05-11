@@ -1,5 +1,6 @@
 .job-card{
     min-height: 80px;
+    /* width:calc(100% - 1px); */
     height: fit-content;
     border-bottom: 1px solid black;
     display: flex;
@@ -16,11 +17,15 @@
     flex-direction: column;
     justify-content: center;
     color:var(--grey);
+    /* mawidth: 95%; */
+    width:90%;
 }
 .job-card-title{
     font-size: 20px;
     font-family: 'Inter Semi Bold';
-    margin-inline-end: 20px;
+    width:90%;
+    /* margin-top: 6px; */
+    /* margin-inline-end: 20px; */
 }
 .job-card-location{
     margin-block:6px;
@@ -32,4 +37,23 @@
     height:100%;
     width:100%;
     scale:0.7;
+}
+
+.job-view{
+    background-color: transparent;
+    width: max-content;
+    color:purple;
+    margin-right:20px;
+    
+    /* border: none; */
+    /* border:1px solid black; */
+}
+
+.job-view:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.job-card-details{
+    /* border:1px solid black; */
 }

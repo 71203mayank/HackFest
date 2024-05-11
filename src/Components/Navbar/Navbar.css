@@ -38,3 +38,15 @@
     background-color: #6B81FF;
     color:white;
 }
+.button-navlink{
+    background-color: white;
+    border:none;
+    border-left: 1px solid var(--primary-black);
+    font-family: 'Agency FB Bold';
+    font-size:18px;
+}
+
+.navlink:hover{
+    background-color: var(--primary-black);
+    color:white;
+}

@@ -24,11 +24,16 @@
 }
 .hero-nav-button{
     /* width: 15vw; */
+    background-color: var(--primary-black);
+    color:white;
+    border:none;
     width:calc(15vw - 1px);
     display: flex;
     align-items: center;
     justify-content: center;
     border-left: 1px solid white;
+    font-family: 'Agency FB Reg';
+    font-size:18px;
 }
 .hero-main{
     display: flex;
