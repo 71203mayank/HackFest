@@ -27,6 +27,7 @@ export default function JobList() {
             .catch((error) => {
                 console.error("Error fetching data:", error);
             });
+
     }, [url]);
 
 function shuffleArray(array) {
@@ -46,13 +47,13 @@ const handleFilter = () => {
         tempUrl += `?location=${location}&name=${name}&job=${job}`;
     }
     setUrl(tempUrl);
-    console.log(tempUrl);
+    // console.log(tempUrl);
 
 };
 
 // const isFilterButtonDisabled = !location && !name && !job;
 
-// console.log(name)
+// console.log(data);
 
   return (
     <div className='job-list'>

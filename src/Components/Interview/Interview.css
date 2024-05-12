@@ -1,0 +1,52 @@
+.interview{
+    height:calc(100svh - 127px);
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+}
+
+.interview-container{
+    width:900px;
+    margin-block: 36px;
+    display: grid;
+    grid-template-columns: 450px 450px;
+}
+.interview-container-inner{
+    height: 200px;
+    /* border:1px solid black; */
+}
+.interview-inner-head{
+    display: flex;
+    align-items: center;
+    height:60px;
+}
+.interview-img-container{
+    height:60px;
+    width:60px;
+}
+.interview-img{
+    height:100%;
+    width: 100%;
+}
+.interview-company-name{
+    font-family: 'Inter Bold';
+    font-size: 32px;
+    margin-left: 12px;
+    color: var(--grey);
+}
+.interview-table{
+    height:100px;
+    /* border:1px solid black; */
+    margin-top: 6px;
+    margin-inline: 6px;
+}
+.interview-table-list{
+    margin-top: 2px;
+    font-size: 16px;
+    font-family: 'Inter Regular';
+    color:purple;
+}
+.interview-table-list:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}

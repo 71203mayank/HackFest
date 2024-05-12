@@ -1,4 +1,6 @@
 import BuildApp from "./Components/BuildApp/BuildApp";
+import Interview from "./Components/Interview/Interview";
+// import InterviewCard from "./Components/InterviewCard/InterviewCard";
 import JobDesc from "./Components/JobDesc/JobDesc";
 import JobList from "./Components/JobLists/JobList";
 import Learn from "./Components/Learn/Learn";
@@ -23,6 +25,8 @@ function App() {
             <Route path='learn' element={<Learn/>}/>
             <Route path='jobdesc' element={<JobDesc/>}/>
             <Route path='score' element = {<Score/>}/>
+            <Route path='diaries' element={<Interview/>}/>
+            {/* <Route path='interviewdesc' element={<InterviewCard/>} /> */}
           </Route>
         </Routes>
       </BrowserRouter>

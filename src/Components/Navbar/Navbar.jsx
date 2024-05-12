@@ -16,12 +16,12 @@ export default function Navbar() {
         <div className='navbar'>
             <div className='navbar-title'><Link to='/' style={{color:'black'}}>PlaceMeNow.in</Link></div>
             <div className='navbar-links-container'>
-                <Link to='/user'><div className='navlink'>Find Jobs</div></Link>
-                <Link to='/user/build'><div className='navlink'>Build Your <br></br>Application</div></Link>
-                <Link to='/user/learn'><div className='navlink'>Prepare</div></Link>
-                <Link to='/user/score'><div className='navlink'>Score Your <br></br> Application</div></Link>
+                <Link to='/user' activeClassName='active-navlink'><div className='navlink'>Find Jobs</div></Link>
+                <Link to='/user/build' activeClassName='active-navlink'><div className='navlink'>Build Your <br></br>Application</div></Link>
+                <Link to='/user/learn' activeClassName='active-navlink'><div className='navlink'>Prepare</div></Link>
+                <Link to='/user/score' activeClassName='active-navlink'><div className='navlink'>Score Your <br></br> Application</div></Link>
+                <Link to='/user/diaries' activeClassName='active-navlink'><div className='navlink'>Interview <br></br> Diaries</div></Link>
                 
-                <div className='navlink'>Interview <br></br> Diaries</div>
                 {/* <button onClick={handleOnClick}  className='navlink button-navlink'>Learn</button> */}
                 <button onClick={(e)=>logout()} className='navlink button-navlink'>Log Out</button>
             </div>
