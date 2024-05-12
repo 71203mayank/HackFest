@@ -2,6 +2,7 @@
     height:calc(100svh - 127px);
     /* background-color: aquamarine; */
     display: flex;
+    overflow-y: scroll;
 }
 .learn-left{
     flex:1;
@@ -38,5 +39,8 @@
 }
 
 .learn-right{
-    flex:1
+    flex:1;
+    margin: 20px;
+    overflow-y: scroll;
+    font-family: 'Inter Regular';
 }

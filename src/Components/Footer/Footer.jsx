@@ -26,8 +26,10 @@ export default function Footer() {
                     <div className='footer-container-one-left-inner'>PlaceMeNow.in</div>
                 </div>
                 <div className='footer-container-one-right'>
-                    <div className='footer-container-one-right-inner'>GitHub</div>
-                    <div className='footer-container-one-right-inner'>Documentations</div>
+                    <div className='footer-container-one-right-inner'><a href='https://github.com/71203mayank/HackFest' target='blank'>GitHub</a></div>
+                    <div className='footer-container-one-right-inner'><a href='https://github.com/71203mayank/HackFest/blob/main/README.md' target='blank'>Documentations</a></div>
+                    
+                    
                     <div className='footer-container-one-right-inner'>System Requirements</div>
                 </div>
             </div>

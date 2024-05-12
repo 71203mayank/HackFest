@@ -63,6 +63,10 @@
     justify-content: right;
     font-size: 32px;
 }
+a{
+    text-decoration: none;
+    color:white
+}
 
 .footer-container-two{
     height: 50px;
