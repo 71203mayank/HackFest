@@ -13,6 +13,7 @@ from pydantic import BaseModel
 from langchain.llms.openai import OpenAIChat
 from langchain.prompts import PromptTemplate
 from typing import Optional
+from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
 from langchain.chains import LLMChain
@@ -21,6 +22,17 @@ load_dotenv()
 MONGO_DB_URI = os.getenv("MONGO_DB_URI")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Consider narrowing this down in production
+    allow_methods=["*"],  # Specifically allow GET, POST, etc.
+    allow_headers=["*"]
+)
+
+@app.get("/")
+def read_root():
+    return {"response": "Service is ready to run"}
 
 chrome_options = Options()
 chrome_options.add_argument("--headless=new")
@@ -165,9 +177,10 @@ async def review_cv(request: CVReviewRequest):
     print(cv_data)
     job_description = request.job_description
     print(job_description)
-    prompt = PromptTemplate(template="""You are a CV reviewer, you need to give a rating from 0 to 10.Strictly remember to do this in the beginning .Make sure the rating is consistent. You need to provide a review of the CV and also give 4 points on how the CV can be more perfect for the job description.
+    prompt = PromptTemplate(template="""You are a CV reviewer, you need to give a critical rating from 0 to 10.Strictly remember to do this in the beginning .Make sure the rating is based on comparing the CV and Job description and the more suitable the CV is for the job ,the better the rating. You need to provide a review of the CV and also give 4 points on how the CV can be more perfect for the job description.
                                             CV Information: {cv_data}
-                                            Job Description: {job_description}.Strcitly remember to start with the rating and no other phrase""", 
+                                            Job Description: {job_description}.Strcitly remember to start with the rating and no other phrase.\n
+                                            .Strictly output in markdown""", 
                                 input_variables=["cv_data", "job_description"])
     
     # Invoke the language model with the prepared prompt
@@ -179,13 +192,15 @@ async def review_cv(request: CVReviewRequest):
     response=llm_chain.run(cv_data=cv_data, job_description=job_description)
     
     # Return the model's response as JSON
-    return {"review": response}
+    return response
+
+
 
 @app.post("/prepare/")
 async def review_cv(request: Prepare):
     # Prepare the prompt using the request data
     
-    prompt = PromptTemplate(template="""You are a technical bot that helps users prepare for their job tests and Interviews.The user wants to prepare for {area} and has {time} to prepare. The user also has some additional information {additional_info} that they want to share with you. You need to provide the user with a detailed plan on how they can prepare for the test or interview.Include timelines , video references and theory references.""", 
+    prompt = PromptTemplate(template="""You are a technical bot that helps users prepare for their job tests and Interviews.The user wants to prepare for {area} and has {time} to prepare. The user also has some additional information {additional_info} that they want to share with you. You need to provide the user with a detailed plan on how they can prepare for the test or interview.Include timelines , video references and theory references.Strictly start with the roadmap directly..Strictly output in markdown""", 
                                 input_variables=["area", "time","additional_info"])
     
     # Invoke the language model with the prepared prompt
@@ -197,31 +212,13 @@ async def review_cv(request: Prepare):
     response=llm_chain.run(area=request.area, time=request.time, additional_info=request.additional_info)
     
     # Return the model's response as JSON
-    return {"answer": response}
-
-@app.post("/prepare/")
-async def review_cv(request: Prepare):
-    # Prepare the prompt using the request data
-    
-    prompt = PromptTemplate(template="""You are a technical bot that helps users prepare for their job tests and Interviews.The user wants to prepare for {area} and has {time} to prepare. The user also has some additional information {additional_info} that they want to share with you. You need to provide the user with a detailed plan on how they can prepare for the test or interview.Include timelines , video references and theory references.Strictly start with the roadmap directly""", 
-                                input_variables=["area", "time","additional_info"])
-    
-    # Invoke the language model with the prepared prompt
-    llm_chain = LLMChain(
-    llm=llm,
-    prompt=prompt,
-    verbose = True)
-    
-    response=llm_chain.run(area=request.area, time=request.time, additional_info=request.additional_info)
-    
-    # Return the model's response as JSON
-    return {"answer": response}
+    return response
 
 @app.post("/build-app/")
 async def review_cv(request: ApplicationBuilder):
     # Prepare the prompt using the request data
     
-    prompt = PromptTemplate(template="""You are an aplication builder who builds documents like LORs and SOPs for users. The user wants to build a {type} and has provided you with the following CV data {cv_data} and job description {job_description}. You need to build the document for the user.Make it impressive and sttrictly start with the document directly""",
+    prompt = PromptTemplate(template="""You are an aplication builder who builds documents like LORs and SOPs for users. The user wants to build a {type} and has provided you with the following CV data {cv_data} and job description {job_description}. You need to build the document for the user.Make it impressive and sttrictly start with the document directly.Strictly output in markdown""",
                             input_variables=["type", "cv_data", "job_description"])
     
     # Invoke the language model with the prepared prompt
@@ -233,11 +230,11 @@ async def review_cv(request: ApplicationBuilder):
     response=llm_chain.run(type=request.type, cv_data=request.cv_data, job_description=request.job_description)
     
     # Return the model's response as JSON
-    return {"answer": response}
+    return response
 
 
 
     
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=1000)
+    uvicorn.run(app, host="192.168.21.226", port=3000)
