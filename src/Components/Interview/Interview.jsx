@@ -16,11 +16,11 @@ export default function Interview() {
     const gold_data=[
         {
             id:1,
-            role: " Intern Analyst 2023",
+            role: " Summer Analyst",
             link: 'https://sites.google.com/nitc.ac.in/interviewdiaries/goldman-sachs?authuser=1'
         },{
             id:2,
-            role: " Intern Analyst 2023",
+            role: " Summer Analyst",
             link: 'https://sites.google.com/nitc.ac.in/interviewdiaries/goldman-sachs?authuser=1'
         }
     ]
@@ -28,11 +28,11 @@ export default function Interview() {
     const oracle_data=[
         {
             id:1,
-            role: " Intern Analyst 2023",
+            role: "Server Technology",
             link: 'https://sites.google.com/nitc.ac.in/interviewdiaries/oracle?authuser=1'
         },{
             id:2,
-            role: " Intern Analyst 2023",
+            role: "Application Developer",
             link: 'https://sites.google.com/nitc.ac.in/interviewdiaries/oracle?authuser=1'
         }
     ]
